@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #botao {
+            position: absolute;
+            width: 100%;
+            margin: 0 0 50px 0;
+            display: flex;
+            justify-content: center;
+
+            bottom: 0;
+            /*background-color: red
+            height: 50px;
+            font-size: 24px;*/
+        }
+
+        body {
+            background-image: url('mapa.jpg');
+
+            margin: 0;
+        }
+
+        .direita {
+            position: absolute;
+            animation: direita 2s;
+        }
+
+        .baixo {
+            position: absolute;
+            animation: baixo 2s;
+        }
+
+        @keyframes direita {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 90%;
+            }
+        }
+
+        @keyframes baixo {
+            0% {
+                top: 0;
+            }
+            100% {
+                top: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img id="mario" src="mario.jpg" alt="mariokart" height="100" width="100">
+    <br>
+    <br>
+
+    <div id="botao">
+        <button onclick="myFunction()">Click me</button>
+    </div>
+
+    <script>
+        function myFunction() {
+		document.getElementById('mario').classList.add('direita');
+            document.getElementById('mario').classList.add('baixo');
+          
+        }
+    </script>
+</body>
+
+</html>
